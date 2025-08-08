@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f6f7fb; color: #222; }
+
+.app { max-width: 720px; margin: 40px auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+
+h1 { margin: 0 0 16px; font-size: 28px; }
+
+.input-row { display: flex; gap: 8px; }
+#new-todo { flex: 1; padding: 12px 14px; border: 1px solid #dcddea; border-radius: 8px; font-size: 16px; }
+#new-todo:focus { outline: none; border-color: #6b7bff; box-shadow: 0 0 0 3px rgba(107,123,255,0.15); }
+#add-btn { padding: 12px 16px; border: none; background: #6b7bff; color: white; border-radius: 8px; font-weight: 600; cursor: pointer; }
+#add-btn:hover { background: #5a6af0; }
+
+.toolbar { display: flex; align-items: center; justify-content: space-between; margin: 16px 0; gap: 8px; flex-wrap: wrap; }
+.filters { display: flex; gap: 6px; }
+.filter { padding: 8px 12px; border: 1px solid #e6e7f2; background: #fafbff; border-radius: 999px; cursor: pointer; }
+.filter.active { background: #6b7bff; color: white; border-color: #6b7bff; }
+.actions button { padding: 8px 12px; border: 1px solid #e6e7f2; background: #fff; border-radius: 8px; cursor: pointer; }
+.actions button:hover { background: #f2f3fb; }
+
+.todo-list { list-style: none; padding: 0; margin: 0; }
+.todo-item { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #ececf6; border-radius: 10px; margin-bottom: 10px; background: #fff; }
+.todo-item.completed .title { text-decoration: line-through; color: #9aa0b4; }
+
+.checkbox { width: 20px; height: 20px; cursor: pointer; }
+.title { flex: 1; word-break: break-word; }
+
+.item-actions { display: flex; gap: 8px; }
+.icon-btn { border: 1px solid #e6e7f2; background: #fff; border-radius: 8px; padding: 6px 10px; cursor: pointer; font-size: 14px; }
+.icon-btn:hover { background: #f2f3fb; }
+
+.edit-input { flex: 1; padding: 8px 10px; border: 1px solid #ccd1ee; border-radius: 8px; font-size: 15px; }
+.edit-input:focus { outline: none; border-color: #6b7bff; box-shadow: 0 0 0 3px rgba(107,123,255,0.15); }
+
+.status { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; color: #586079; font-size: 14px; }
+
+@media (max-width: 520px) {
+  .item-actions { gap: 4px; }
+  .icon-btn { padding: 6px 8px; }
+}
